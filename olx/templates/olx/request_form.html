@@ -1,0 +1,10 @@
+{% extends 'olx/base.html' %}
+{% block content %}
+<h1>Form for olx.ua analitics!</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <br>
+  <button type="submit" class="btn btn-primary float-right">Get the report</button>
+</form>
+{% endblock %}
